@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

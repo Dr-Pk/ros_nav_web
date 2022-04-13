@@ -1,0 +1,39 @@
+#nav {
+    float: left;
+}
+
+#wasd {
+    float: left;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    text-align: center;
+}
+
+div img {
+    height: 400px;
+    
+}
+
+#speed-label {
+    clear: left;
+}
+
+h1{
+    text-align: center;
+}
+
+td{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.button{
+    border: 1px solid #333;
+}
