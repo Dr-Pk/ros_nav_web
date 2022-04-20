@@ -1,20 +1,22 @@
 <?php
 
-$cmd ="sh test.sh";
+$term = "gnome-terminal -- ";
+$cmd ="roslaunch turtlebot_stage turtlebot_in_stage.launch";
 
-function execInBackground($cmd) {
-    global $result;
-    if (substr(php_uname(), 0, 7) == "Windows"){
-        pclose(popen("start /B ". $cmd, "r")); 
-    }
-    else {
-	
-        exec($cmd . " > /dev/null &");  
-    }
+global $process;
+
+function execInBackground($cmd,$term) {
+        $process = popen($term . $cmd . " > /dev/null &", "r");
+        pclose($process);
 }
 
 
-execInBackground($cmd);
+execInBackground($cmd,$term);
+
+sleep(10);
+$test = exec("exit");
+echo "$test";
+
 
 
 ?>
@@ -24,7 +26,3 @@ execInBackground($cmd);
 <body onload="alert('success');">
 </body>
 </html>
-
-<?php
-header('Location: index.php');
-?>

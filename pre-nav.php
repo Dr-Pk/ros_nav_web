@@ -1,10 +1,8 @@
+
 <html>
     <body>
         <form method="post" action="list.php">
-
-
             <label for="map">Map Selection:</label>
-		<img class='nav' src='Amine.pgm' alt='slam'>
             <select name="map" id="map">
 	        <?php
                 $fileList = glob('map/*.yaml');
@@ -17,8 +15,7 @@
 	    <input type="submit" value="OK">  
             </select>
         </form>
-
-	
-  
+    
+    
     </body>
 </html>

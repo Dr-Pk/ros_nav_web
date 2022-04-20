@@ -21,7 +21,7 @@
   function init() {
     // Connect to ROS.
     var ros = new ROSLIB.Ros({
-      url : 'ws://10.222.1.224:9090'
+      url : 'ws://172.20.10.3:9090'
     });
       
        var teleop = new KEYBOARDTELEOP.Teleop({
